@@ -18,7 +18,7 @@ resource "aws_db_instance" "postgres" {
   allocated_storage = 20
 
   username = "postgres"
-  password = "Password123!"
+  password = var.db_password
 
   db_subnet_group_name = aws_db_subnet_group.db_subnet_group.name
 
